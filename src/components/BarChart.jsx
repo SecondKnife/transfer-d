@@ -5,7 +5,7 @@ import { mockBarData as data } from "../data/mockData";
 
 
 
-const Barchart = () => {
+const Barchart = ({ isDashboard = false }) => {
 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -13,6 +13,34 @@ const Barchart = () => {
     return(
         <ResponsiveBar
             data={data}
+            theme= {{
+                axis:{
+                    domain:{
+                        line:{
+                            stroke:colors.grey[100]
+                        }
+                    },
+                    legend: {
+                        text:{
+                            fill:colors.grey[100]
+                        }
+                    },
+                    ticks: {
+                        line:{
+                            stroke:colors.grey[100],
+                            strokeWidth: 1,
+                        },
+                        text:{
+                            fill:colors.grey[100]
+                        }
+                    },
+                },
+                legends: {
+                    text:{
+                        fill: colors.grey[100]
+                    }
+                }
+            }}
             keys={[
                 'hot dog',
                 'burger',
@@ -76,7 +104,7 @@ const Barchart = () => {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'country',
+                legend: isDashboard ? undefined :'country',
                 legendPosition: 'middle',
                 legendOffset: 32
             }}

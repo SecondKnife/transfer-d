@@ -8,12 +8,12 @@ import Dashboard from "./Applayout/dashboard";
 import Team from "./Applayout/team/";
 import Invoices from "./Applayout/invoices";
 import Contacts from "./Applayout/contacts";
-// import Bar from "./Applayout/bar";
+import Bar from "./Applayout/bar";
 import Form from "./Applayout/form";
-// import Line from "./Applayout/line";
-// import Pie from "./Applayout/pie";
+import Line from "./Applayout/line";
+import Pie from "./Applayout/pie";
 import FAQ from "./Applayout/faq";
-// import Geography from "./Applayout/geography";
+import Geography from "./Applayout/geography";
 import Calendar from "./Applayout/calendar";
 
 
@@ -30,16 +30,16 @@ function App() {
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
-               <Route path="/" element={<Dashboard/>}/> 
-               <Route path="/team" element={<Team/>}/> 
+              <Route path="/" element={<Dashboard/>}/> 
+              <Route path="/team" element={<Team/>}/> 
               <Route path="/contacts" element={<Contacts/>}/> 
               <Route path="/invoices" element={<Invoices/>}/>
-              {/*<Route path="/bar" element={<Bar/>}/>*/}
+              <Route path="/bar" element={<Bar/>}/>
               <Route path="/form" element={<Form/>}/>
-              {/*<Route path="/line" element={<Line/>}/>*/}
-              {/*<Route path="/pie" element={<Pie/>}/>*/}
+              <Route path="/line" element={<Line/>}/>
+              <Route path="/pie" element={<Pie/>}/>
               <Route path="/faq" element={<FAQ/>}/>
-              {/*<Route path="/geography" element={<Geography/>}/>*/}
+              <Route path="/geography" element={<Geography/>}/>
               <Route path="/calendar" element={<Calendar/>}/>
             </Routes>
           </main>
